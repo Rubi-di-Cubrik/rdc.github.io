@@ -1,0 +1,267 @@
+/* body{
+    background-color: #5e81ac;
+} */
+
+body{
+	font-family:'PT Mono', monospace;
+    color: #f4f4f4;
+    background-color: #363636/*#848486 #343434*/;
+    background: url(./imgs/team.jpg) no-repeat fixed center;
+}
+
+/* .window {
+    width: 915px;
+    height: 790px;
+    top: 50%;
+    text-align: center;
+    background-color: #262626;
+} */
+
+/******************** NAVICATION BAR ********************/
+.nav ul {
+    list-style: none;
+    padding-top:   10px;
+    padding-left:  20px;
+    padding-right: 20px;
+    overflow: hidden;
+}
+.nav li {
+    font-weight: bold; /* TODO: da sistemare con la formattazione del terminale */
+    display: inline;
+    float: right;
+} 
+
+.nav li button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.nav a:link, a:visited, a:hover, a:active{ 
+    text-decoration: none; 
+    color: inherit;
+}
+
+.nav span {
+    color: #c34113;
+}
+
+/******************** LOGO ASCII ARTS ********************/
+.logo {
+    position: relative;
+    font-weight: bold;
+    /* height: 300px; */
+    /* width: 100%; */
+}
+
+.logo pre{
+    padding-top: 75px;
+    /* position:absolute;
+    top: 50%; */
+    /* -ms-transform: translateY(-50%);
+    transform: translateY(-50%); */
+
+    text-align: center;
+	/* top:0;
+	left:0; */
+	width:100%;
+	height:120px;
+	/* padding:1rem; */
+    /* padding: 10px; */
+	resize:none;
+	border:none;
+}
+
+.divider hr {
+    box-sizing: content-box;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #f4f4f4;
+}
+
+
+/******************** WRITEUPS ****************/
+
+.writeups {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/******************* MEMBERS CARDS **************/
+
+.members {
+    /* height: 100vh; */
+    width: 100vw;
+
+    max-height: 800px;
+    max-width: 1212px;
+    min-height: 250px;
+    /* min-width: 1000px; */
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+
+
+}
+
+.border {
+    /* height: 242px; */
+    height: 190px;
+    width: 190px;
+    background: transparent;
+    border-radius: 10px;
+    transition: border 1s;
+    position: relative;
+
+}
+.border:hover{
+    border: 1px solid white;
+}
+
+.card{
+  /* height: 252px; */
+  height: 200px;
+  width: 200px;
+  background: grey;
+  border-radius: 10px;
+  transition: background 0.8s;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 70px 63px -60px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card:hover h2{
+    opacity: 1;
+}
+.card:hover .fa{
+    opacity: 1;
+}
+
+
+.members h2{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: white;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.members .fa{
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.icons{
+  position: absolute;
+  fill: #fff;
+  color: #fff;
+  height: 130px;
+  top: 50px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+/******************** responsive ****************/
+
+/********************** DESKTOP *****************/
+
+@media (min-width: 851px) { /* DISPLAY DESKTOP LOGO */
+    .logo .mobile {
+        display: none;
+    }
+    .container{ /* serve per centrare il floating window */
+        height: 100vh;
+        width: 100vw;
+    
+        max-height: 800px;
+        max-width: 1280px;
+        min-height: 600px;
+        min-width: 1000px;
+    
+        display: flex;
+        align-items: center;
+        
+        margin: 0 auto;
+    }
+}
+
+/* @media (min-width:435px) { per il responsive del footer
+
+} */
+
+@media (min-width:1320px) { /* DISPLAY DESKTOP FLOATING WINDOW */
+    .window {
+        width: 1212px;
+        /* height: 815px; */
+        margin:auto;
+        text-align: center;
+        border-radius: 25px;
+        box-shadow: -1px 5px 5px hsla(0, 0%, 0%, 0.15);
+        background-color: rgba(38, 38, 38, 0.7);
+        /* box-shadow: 2px 2px 10px 5px 10px #656262; */
+    }
+    .window::before {
+        content: '';
+        position: absolute;
+        inset: 3%;
+        z-index: -1;
+        width: 1212px;
+        margin-top: -20px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        filter: blur(1px);
+        backdrop-filter: blur(1px);
+        border-radius: 25px;
+    }
+}
+
+/************************ MOBILE ***************/
+
+@media (max-width: 850px) { /* DISPLAY MOBILE LOGO */
+    .logo .desktop {
+        display: none;
+    }
+    /* change hr size */
+    .divider hr {
+        width: 146.5px;
+    }
+}
+
+@media (max-width:1320px) { /* HIDE DESKTOP FLOATING WINDOW */
+    .window {
+        width: 100%;
+        height: 100%;
+    }
+    body {
+        background-color: #262626;
+    }
+}
+/******************** FOOTER ********************/
+
+.footer {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.footer a {
+    color: #c34113;
+}
+
+.footer a:hover {
+    color: #ff875b;
+}
