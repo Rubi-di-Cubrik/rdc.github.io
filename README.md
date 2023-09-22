@@ -2,7 +2,7 @@
 
 Welcome to the official repository of our cybersecurity team, "Rubi Di Cubrik," specializing in Capture The Flag (CTF) competitions!
 
-<img src="https://i.postimg.cc/y6PPG4VX/Final-logo.png" alt="TEAM Logo" width="50px">
+<img src="https://i.postimg.cc/y6PPG4VX/Final-logo.png" alt="TEAM Logo" width="200px">
 
 ## Who We Are
 
