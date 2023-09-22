@@ -1,27 +1,39 @@
-<img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="Rubi Di Cubrik logo" src="https://i.postimg.cc/j5HZ7ngT/image.png">
+# Rubi Di Cubrik - CTF Team
 
-# Rubi Di Cubrik
+Welcome to the official repository of our cybersecurity team, "Rubi Di Cubrik," specializing in Capture The Flag (CTF) competitions!
 
-> **rdc{Rub1_D1_Cubr1k}**
+![TEAM Logo](https://i.postimg.cc/y6PPG4VX/Final-logo.png)
 
-##
+## Who We Are
 
-## Links
-*   [Website](http://rubidicubrik.it)
-*   [CTFTime](https://ctftime.org/team/168156)
+We are "Rubi Di Cubrik," a passionate group of cybersecurity enthusiasts dedicated to honing our skills, sharing knowledge, and actively competing in CTF challenges. Our team is composed of experts in various cybersecurity domains, including reverse engineering, web security, cryptography, exploitation, and more.
 
-## Members
--   **`0xAlessandro`** Specialized in ***{`Web`, `Binary`}***
-*   **`Argh`** Specialized in ***{`Misc`, `Web`}***
--   **`Fabb`** Specialized in ***{`Misc`, `Crypto`}***
-*   **`Fanta`** Specialized in ***{`Misc`, `Crypto`}***
--   **`Giak`** Specialized in ***{`Pwn`, `Scripting`}***
-*   **`Irvanni`** Specialized in ***{`Misc`, `Network`}***
--   **`Mufasa`** Specialized in ***{`None`, `None`}***
-*   **`Ricky`** Specialized in ***{`Crypto`, `Stegonagraphy`}***
--   **`Shiscat`** Specialized in ***{`Web`, `Misc`}***
-*   **`U_Ignax`** Specialized in ***{`Scripting`, `Web`}***
+## CTFs and Competitions
 
-## Support
+We are active participants in both online and offline CTF competitions. Here, we will share details about the challenges we engage with, our competition results, and insights into our problem-solving strategies.
 
->   Support email: info@rubidicubrik.it
+## Join Us
+
+If you're interested in joining "Rubi Di Cubrik" or collaborating with us during CTF competitions, please don't hesitate to contact us via [email](mailto:team@rubidicubrik.it). We actively seek new members who are enthusiastic about cybersecurity.
+
+## Helpful Resources
+
+We've compiled a list of valuable resources to help you get started with CTF competitions or enhance your cybersecurity skills:
+
+- [CTF Time](https://ctftime.org/team/168156/): The ultimate resource for CTF competitions, featuring information about ongoing and past events.
+
+- [Write-ups](https://rubidicubrik.it/writeups/): Here, you'll find solutions to CTF challenges we've tackled. Write-ups are an excellent way to learn new techniques and approaches.
+
+- [Cybersecurity Resources](link_to_additional_resources): A collection of additional resources, including guides, online courses, and useful tools.
+
+## Contact Us
+
+For questions, suggestions, or to connect with us, you can reach out through the following channels:
+
+- Email: [team@rubidicubrik.it](mailto:team@rubidicubrik.it)
+- Twitter: [@RubiDiCubrik](https://twitter.com/RubidiCubrik)
+- Discord: [Link to our CTF Discord server](https://discord.gg/sqbkWZNRS9)
+
+We're thrilled to share our passion for cybersecurity and collaborate with like-minded individuals. Join us, and let's conquer CTF challenges together!
+
+**Happy hacking!**
