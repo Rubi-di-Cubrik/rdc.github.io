@@ -2,204 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="members.css">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <title>Rubi di Cubrik</title>
+    <title>Rubi di Cubrik | HOME</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-
-        <div class = "window"> <!--1212 x 815 -->
-            <!--inline navbar-->
-            <div class = "nav">
-                <ul>
-                    <li style = "float:left"> 
-                        > <a class = "nav" href="index.html" > 
-                            <span>[</span> Rubi di Cubrik <span>]</span>
-                        </a> 
-                    </li>
-                    
-                    <li> <button onclick="getWriteUps()"> writeups </button> </li>
-                </ul>
-            </div>
-
-
-            <!--logo in ascii arts -->
-            <div class = "logo">
-                <!-- RUBI DI CUBRIK ~ LOGO -->
-                <pre class = "desktop" disabled>
-    /$$$$$$$            /$$       /$$             /$$ /$$        /$$$$$$            /$$                 /$$ /$$      
-    | $$__  $$          | $$      |__/            | $$|__/       /$$__  $$          | $$                |__/| $$      
-    | $$  \ $$ /$$   /$$| $$$$$$$  /$$        /$$$$$$$ /$$      | $$  \__/ /$$   /$$| $$$$$$$   /$$$$$$  /$$| $$   /$$
-    | $$$$$$$/| $$  | $$| $$__  $$| $$       /$$__  $$| $$      | $$      | $$  | $$| $$__  $$ /$$__  $$| $$| $$  /$$/
-    | $$__  $$| $$  | $$| $$  \ $$| $$      | $$  | $$| $$      | $$      | $$  | $$| $$  \ $$| $$  \__/| $$| $$$$$$/ 
-    | $$  \ $$| $$  | $$| $$  | $$| $$      | $$  | $$| $$      | $$    $$| $$  | $$| $$  | $$| $$      | $$| $$_  $$ 
-    | $$  | $$|  $$$$$$/| $$$$$$$/| $$      |  $$$$$$$| $$      |  $$$$$$/|  $$$$$$/| $$$$$$$/| $$      | $$| $$ \  $$
-    |__/  |__/ \______/ |_______/ |__/       \_______/|__/       \______/  \______/ |_______/ |__/      |__/|__/  \__/
-                </pre>
-                <pre class="mobile" disabled>
-    /$$$$$$$        /$$  /$$$$$$ 
-    | $$__  $$      | $$ /$$__  $$
-    | $$  \ $$  /$$$$$$$| $$  \__/
-    | $$$$$$$/ /$$__  $$| $$      
-    | $$__  $$| $$  | $$| $$      
-    | $$  \ $$| $$  | $$| $$    $$
-    | $$  | $$|  $$$$$$$|  $$$$$$/
-    |__/  |__/ \_______/ \______/ 
-                </pre> 
-            </div>
-            <div class = "divider"><hr width="50%"></div>
-
-            <!-- Members -->
-            <!--line 1 -->
-            <div class = "members">
-                <div class="card cardArgh">
-                    <div class="border">
-                        <h2>Argh</h2>
-                        <div class="icons">
-                            <!-- social link icons -->
-                            <i class="fa fa-codepen" aria-hidden="true"></i>
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <i class="fa fa-dribbble" aria-hidden="true"></i>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="card cardIrvanni">
-                    <div class="border">
-                    <h2>IRVANNI</h2>
-                        <div class="icons">
-                            <!-- social link icons -->
-                            <i class="fa fa-codepen" aria-hidden="true"></i>
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <i class="fa fa-dribbble" aria-hidden="true"></i>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="card cardShishcat">
-                    <div class="border">
-                        <h2>ShiSHcat</h2>
-                        <div class="icons">
-                            <!-- social link icons -->
-                            <i class="fa fa-codepen" aria-hidden="true"></i>
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <i class="fa fa-dribbble" aria-hidden="true"></i>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>  
-                <div class="card cardAlessandro">
-                    <div class="border">
-                        <h2>0xAlessandro</h2>
-                        <div class="icons">
-                            <!-- social link icons -->
-                            <i class="fa fa-codepen" aria-hidden="true"></i>
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <i class="fa fa-dribbble" aria-hidden="true"></i>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="card cardGiak">
-                    <div class="border">
-                        <h2>Giak77</h2>
-                        <div class="icons">
-                            <!-- social link icons -->
-                            <i class="fa fa-codepen" aria-hidden="true"></i>
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <i class="fa fa-dribbble" aria-hidden="true"></i>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>          
-            </div>
-            <!-- line 2 -->
-            <div class = "members">
-                <div class="card cardFanta">
-                    <div class="border">
-                        <h2>Fanta</h2>
-                        <div class="icons">
-                            <!-- social link icons -->
-                            <i class="fa fa-codepen" aria-hidden="true"></i>
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <i class="fa fa-dribbble" aria-hidden="true"></i>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="card cardIgnax  ">
-                    <div class="border">
-                    <h2>U_Ignax</h2>
-                        <div class="icons">
-                            <!-- social link icons -->
-                            <i class="fa fa-codepen" aria-hidden="true"></i>
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <i class="fa fa-dribbble" aria-hidden="true"></i>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="card cardMx">
-                    <div class="border">
-                        <h2>Mx-05</h2>
-                        <div class="icons">
-                            <!-- social link icons -->
-                            <i class="fa fa-codepen" aria-hidden="true"></i>
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <i class="fa fa-dribbble" aria-hidden="true"></i>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>  
-                <div class="card cardFab">
-                    <div class="border">
-                        <h2>Fabbb</h2>
-                        <div class="icons">
-                            <!-- social link icons -->
-                            <i class="fa fa-codepen" aria-hidden="true"></i>
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <i class="fa fa-dribbble" aria-hidden="true"></i>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>  
-                <div class="card cardRicky">
-                    <div class="border">
-                        <h2>Ricky</h2>
-                        <div class="icons">
-                            <!-- social link icons -->
-                            <i class="fa fa-codepen" aria-hidden="true"></i>
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <i class="fa fa-dribbble" aria-hidden="true"></i>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>             
-            </div>
-
-            <!-- Writeups -->
-            <div class="writeups"></div>
-
-            <!--footer con i contatti-->
-            <div class = "footer">
-                ~/<i>ContactUs</i>/<i>Email</i>$ <a href = "mailto:info@rubidicubrik.it">info@rubidicubrik.it</a>
-            </div>
+    <div id="blur_container">
+        <nav id="navbar">
+            <b><a href="/">> <b style="color: orangered;">[</b> Rubi di Cubrik <b style="color: orangered;">]</b></a></b>
+            <b><a class="link nav" href="/resources.html"><i class="fa-solid fa-folder-open"></i> Resources</a> <a class="link nav"href="/events.html"><i class="fa-solid fa-calendar-days"></i> Events</a> <a class="link nav" href="/writeups.html"><i class="fa-solid fa-file-lines"></i> Writeups</a> <a class="link nav" href="/posts.html"><i class="fa-solid fa-comment"></i> Posts</a></b>
+        </nav>
+        <br><br>
+        <pre id="title"></pre>
+        <div id="social">
+            <h2><a href="https://github.com/Rubi-di-Cubrik" class="link"><i class="fa-brands fa-github"></i></a> <a href="https://twitter.com/RubidiCubrik" class="link"><i class="fa-brands fa-x-twitter"></i></a> <a href="https://rubidicubrik.it/" class="link"><i class="fa-brands fa-weebly"></i></a> <a href="mailto:team@rubidicubrik.it" class="link"><i class="fa-solid fa-envelope"></i></a> <a href="https://ctftime.org/team/168156" class="link"><i class="fa-solid fa-flag"></i></a></h2>
+        </div>
+        <hr class="division_line">
+        <div id="news">
+            <h2 style="text-align: center;">News</h2>
+        </div>
+        <hr class="division_line">
+        <div id="members">
+            <h2>Members</h2>
         </div>
     </div>
-    <script type="text/javascript" src="main.js"></script>
+    <script src="./static/js/discord-lookup.js"></script>
+    <script src="./static/js/title.js"></script>
 </body>
 </html>
