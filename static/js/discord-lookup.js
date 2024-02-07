@@ -23,8 +23,7 @@ let members_discord_ids = [
     "679753728752091166",
     "770558769490165780",
     "457124182858268673",
-    "329566380070404097",
-    ""
+    "329566380070404097"
 ];
 
 function shuffle(array) {
@@ -43,22 +42,19 @@ function get_default_avatar(){
     return arr[parseInt(Math.random() * (arr.length - 1)) + 1];
 }
 
+let member_div, global_username, alias, img;
+
 for(let i in members_discord_ids){
-    fetch(`https://discordlookup.mesavirep.xyz/v1/user/${members_discord_ids[i]}`).then(async response => await response.json()).then(async data => {
-        let member_div = document.createElement("div");
+    fetch(`https://discordlookup.mesavirep.xyz/v1/user/${members_discord_ids[i]}`).then(response => response.json()).then(async data => {
+        member_div = document.createElement("div");
         member_div.style.display = "inline-block";
         member_div.style.margin = "10px";
-        let img = document.createElement("img");
-        let global_username = document.createElement("h3");
-        let alias = document.createElement("h4");
-        if(screen.width >= 768){
-            member_div.style.width = "170px";
-        }else{
-            member_div.style.width = "100px";
-            img.style.width = "80px";
-            global_username.style.fontSize = "small";
-            alias.style.fontSize = "small";
-        }
+        img = document.createElement("img");
+        global_username = document.createElement("h3");
+        alias = document.createElement("h4");
+        member_div.style.width = "100px";
+        member_div.style.fontSize = "small";
+        img.style.width = "80px";
         img.style.borderRadius = "20px";
         img.src = await data.avatar.link || `./static/imgs/discord-default-pfps/${get_default_avatar()}`;
         global_username.textContent = await data.global_name;

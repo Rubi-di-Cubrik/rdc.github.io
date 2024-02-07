@@ -1,28 +1,4 @@
-if(screen.width >= 1030){
-    title = `\
-/$$$$$$$            /$$       /$$             /$$ /$$        /$$$$$$            /$$                 /$$ /$$       
-| $$__  $$          | $$      |__/            | $$|__/       /$$__  $$          | $$                |__/| $$      
-| $$  \\ $$ /$$   /$$| $$$$$$$  /$$        /$$$$$$$ /$$      | $$  \\__/ /$$   /$$| $$$$$$$   /$$$$$$  /$$| $$   /$$
-| $$$$$$$/| $$  | $$| $$__  $$| $$       /$$__  $$| $$      | $$      | $$  | $$| $$__  $$ /$$__  $$| $$| $$  /$$/
-| $$__  $$| $$  | $$| $$  \\ $$| $$      | $$  | $$| $$      | $$      | $$  | $$| $$  \\ $$| $$  \\__/| $$| $$$$$$/ 
-| $$  \\ $$| $$  | $$| $$  | $$| $$      | $$  | $$| $$      | $$    $$| $$  | $$| $$  | $$| $$      | $$| $$_  $$ 
-| $$  | $$|  $$$$$$/| $$$$$$$/| $$      |  $$$$$$$| $$      |  $$$$$$/|  $$$$$$/| $$$$$$$/| $$      | $$| $$ \\  $$
-|__/  |__/ \\______/ |_______/ |__/       \\_______/|__/       \\______/  \\______/ |_______/ |__/      |__/|__/  \\__/\
-`
-}else{
-    title = `\
-/$$$$$$$        /$$  /$$$$$$  
-| $$__  $$      | $$ /$$__  $$
-| $$  \\ $$  /$$$$$$$| $$  \\__/
-| $$$$$$$/|/$$__  $$| $$      
-| $$__  $$| $$  | $$| $$      
-| $$  \\ $$| $$  | $$| $$    $$
-| $$  | $$|  $$$$$$$|  $$$$$$/
-|__/  |__/ \\_______/ \\______/ 
-`
-}
-
-title_arr = []
+let title, title_arr, index;
 
 function rdc_splitString(str, n) {
     const chunks = [];
@@ -46,18 +22,6 @@ function rdc_splitString(str, n) {
     return chunks;
 }
 
-for(let i in title.split("\n")){
-    let line = title.split("\n")[i];
-    let chunks = rdc_splitString(line, 10);
-    for(let j in chunks){
-        if(i == 0){
-            title_arr[j] = chunks[j]+"\n";
-        }else{
-            title_arr[j] += chunks[j]+"\n";
-        }
-    }
-}
-
 function updateText(old_text, text_to_add){
     let new_text = "";
     let old_text_splitted = old_text.split("\n"), text_to_add_splitted = text_to_add.split("\n");
@@ -71,18 +35,55 @@ function updateText(old_text, text_to_add){
     return new_text;
 }
 
-i = 0;
-
 function print_title(){
-    if(i < title_arr.length){
+    if(index < title_arr.length){
         let obj = document.getElementById("title");
-        let newTextContent = updateText(obj.textContent, title_arr[i]);
+        let newTextContent = updateText(obj.textContent, title_arr[index]);
         obj.textContent = newTextContent;
-        i++;
+        index++;
         setTimeout(print_title, 200);
     }
 }
 
-print_title();
+const resize_ob = new ResizeObserver(function(entries) {
+    if(screen.width >= 1030){
+        title = `\
+/$$$$$$$            /$$       /$$             /$$ /$$        /$$$$$$            /$$                 /$$ /$$       
+| $$__  $$          | $$      |__/            | $$|__/       /$$__  $$          | $$                |__/| $$      
+| $$  \\ $$ /$$   /$$| $$$$$$$  /$$        /$$$$$$$ /$$      | $$  \\__/ /$$   /$$| $$$$$$$   /$$$$$$  /$$| $$   /$$
+| $$$$$$$/| $$  | $$| $$__  $$| $$       /$$__  $$| $$      | $$      | $$  | $$| $$__  $$ /$$__  $$| $$| $$  /$$/
+| $$__  $$| $$  | $$| $$  \\ $$| $$      | $$  | $$| $$      | $$      | $$  | $$| $$  \\ $$| $$  \\__/| $$| $$$$$$/ 
+| $$  \\ $$| $$  | $$| $$  | $$| $$      | $$  | $$| $$      | $$    $$| $$  | $$| $$  | $$| $$      | $$| $$_  $$ 
+| $$  | $$|  $$$$$$/| $$$$$$$/| $$      |  $$$$$$$| $$      |  $$$$$$/|  $$$$$$/| $$$$$$$/| $$      | $$| $$ \\  $$
+|__/  |__/ \\______/ |_______/ |__/       \\_______/|__/       \\______/  \\______/ |_______/ |__/      |__/|__/  \\__/\
+`
+    }else{
+        title = `\
+/$$$$$$$        /$$  /$$$$$$  
+| $$__  $$      | $$ /$$__  $$
+| $$  \\ $$  /$$$$$$$| $$  \\__/
+| $$$$$$$/|/$$__  $$| $$      
+| $$__  $$| $$  | $$| $$      
+| $$  \\ $$| $$  | $$| $$    $$
+| $$  | $$|  $$$$$$$|  $$$$$$/
+|__/  |__/ \\_______/ \\______/ 
+`
+    }
+    title_arr = [];
+    for(let i in title.split("\n")){
+        let line = title.split("\n")[i];
+        let chunks = rdc_splitString(line, 10);
+        for(let j in chunks){
+            if(i == 0){
+                title_arr[j] = chunks[j]+"\n";
+            }else{
+                title_arr[j] += chunks[j]+"\n";
+            }
+        }
+    }
+    document.getElementById("title").textContent = "";
+    index = 0;
+    print_title();
+});
 
-// document.getElementById("title").textContent = title;
+resize_ob.observe(document.getElementsByTagName("html")[0]);
