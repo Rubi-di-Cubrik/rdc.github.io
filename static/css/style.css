@@ -7,14 +7,15 @@ body,html{
 }
 
 body{
-    background-color: #464646;
+    background-color: rgb(21, 30, 40);
     margin: 0;
     background-image: url("../imgs/Logo RDC.png");
+    background-size: 40%;
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     padding: 10px;
-    padding-top: 100px;
+    padding-top: 2%;
     color: white;
     font-family:'PT Mono', monospace;
 }
@@ -23,7 +24,7 @@ body{
 #blur_container{
     position: absolute;
     width: 80%;
-    background-color: rgb(38 38 38 / 60%);
+    background-color: rgb(50 70 100 / 60%);
     backdrop-filter: blur(10px);
     z-index: 0;
     left: 10%;
@@ -52,7 +53,16 @@ a{
 }
 
 .nav.link{
-    float: right;
+    float: right
+}
+
+.nav.link.active{
+    border-bottom: 1px solid rgb(255, 255, 255, 0.7);
+}
+
+.navbar_titles{
+    margin-left: 10px;
+    display: initial;
 }
 
 .link:hover{
@@ -61,12 +71,22 @@ a{
 
 .division_line{
     border: none;
-    border-top: dashed 2px white;
-    width: 70%;
+    /* border-top: solid 2px rgb(255, 255, 255, 0.5); */
+    width: 30%;
 }
 
 #social{
     text-align: center;
+}
+
+#about{
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    text-align: justify;
+    width: 70%;
 }
 
 ::-webkit-scrollbar {
@@ -89,9 +109,20 @@ a{
     background-color: #8ca6c4;
 }
 
+
+
 @media screen and (max-width: 375px){
     .link.nav{
         font-size: small;
         float: none;
+    }
+
+    .navbar_titles{
+        display: none;
+    }
+    
+    .navbar_links{
+        margin-top: 10px;
+        display: block;
     }
 }
