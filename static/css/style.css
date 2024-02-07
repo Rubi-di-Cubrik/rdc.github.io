@@ -89,6 +89,10 @@ a{
     width: 70%;
 }
 
+.content_title{
+    margin-bottom: 5px;
+}
+
 ::-webkit-scrollbar {
     width: 13px;
 }
@@ -124,5 +128,11 @@ a{
     .navbar_links{
         margin-top: 10px;
         display: block;
+    }
+}
+
+@media screen and (max-width: 475px){
+    .content{
+        font-size: small;
     }
 }
