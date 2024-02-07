@@ -42,11 +42,14 @@ function get_default_avatar(){
     return arr[parseInt(Math.random() * (arr.length - 1)) + 1];
 }
 
-let member_div, global_username, alias, img;
+let member_div, hidden_div, global_username, alias, img;
 
 for(let i in members_discord_ids){
     fetch(`https://discordlookup.mesavirep.xyz/v1/user/${members_discord_ids[i]}`).then(response => response.json()).then(async data => {
         member_div = document.createElement("div");
+        hidden_div = document.createElement("div");
+        hidden_div.className = "hidden-text";
+        member_div.className = "img-container";
         member_div.style.display = "inline-block";
         member_div.style.margin = "10px";
         img = document.createElement("img");
@@ -60,8 +63,9 @@ for(let i in members_discord_ids){
         global_username.textContent = await data.global_name;
         alias.textContent = await data.username;
         member_div.appendChild(img);
-        member_div.appendChild(global_username);
-        member_div.appendChild(alias);
+        hidden_div.appendChild(global_username);
+        hidden_div.appendChild(alias);
+        member_div.appendChild(hidden_div);
         members_div.appendChild(member_div);
     });
 }
