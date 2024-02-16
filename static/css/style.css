@@ -139,6 +139,11 @@ a {
   place-items: center;
 }
 
+#posts {
+  display: grid;
+  place-items: center;
+}
+
 .news_article {
   margin-bottom: 20px;
   display: block;
@@ -150,10 +155,11 @@ a {
   backdrop-filter: blur();
   box-shadow: 0 0 10px 1px rgb(21, 30, 40);
   overflow: hidden;
+  background-color: rgb(41, 49, 51, 0.5);
 }
 
 .news_article:hover {
-  background-color: rgb(255, 255, 255, 0.1);
+  background-color: rgb(41, 49, 51, 0.3);
   cursor: pointer;
 }
 
@@ -225,6 +231,10 @@ a {
   .tree-nav__item-title{
     font-size: 100%;
   }
+
+  .news_article{
+    font-size: 70%;
+  }
 }
 
 summary {
@@ -289,8 +299,8 @@ summary::-webkit-details-marker {
   color: #fff;
   font-size: 125%;
   line-height: 3.2rem;
-  background-color: rgb(255, 255, 255, 0.3);
-  border-radius: 50px;
+  /* background-color: rgb(255, 255, 255, 0.3); */
+  border-radius: 10px 50px 50px 10px;
   width: max-content;
   padding: 20px;
   padding-top: 2px;
