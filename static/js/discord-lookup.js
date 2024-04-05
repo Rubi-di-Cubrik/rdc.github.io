@@ -45,7 +45,7 @@ function get_default_avatar(){
 let member_div, hidden_div, global_username, alias, img;
 
 for(let i in members_discord_ids){
-    fetch(`https://discordlookup.mesavirep.xyz/v1/user/${members_discord_ids[i]}`).then(response => response.json()).then(async data => {
+    fetch(`https://discord-lookup-rest-api.deeploy.ing/v1/user/lookup/${members_discord_ids[i]}`).then(response => response.json()).then(async member => {
         member_div = document.createElement("div");
         hidden_div = document.createElement("div");
         hidden_div.className = "hidden-text";
@@ -59,9 +59,9 @@ for(let i in members_discord_ids){
         member_div.style.fontSize = "small";
         img.style.width = "80px";
         img.style.borderRadius = "20px";
-        img.src = await data.avatar.link || `./static/imgs/discord-default-pfps/${get_default_avatar()}`;
-        global_username.textContent = await data.global_name;
-        alias.textContent = await data.username;
+        img.src = await member.data.avatar.url || `./static/imgs/discord-default-pfps/${get_default_avatar()}`;
+        global_username.textContent = await member.data.displayName;
+        alias.textContent = await member.data.username;
         member_div.appendChild(img);
         hidden_div.appendChild(global_username);
         hidden_div.appendChild(alias);
